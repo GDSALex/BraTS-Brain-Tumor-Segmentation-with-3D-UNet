@@ -4,8 +4,6 @@ from tqdm import tqdm
 import torch
 
 
-    
-
 
     
 class NiftiDataset(tio.data.SubjectsDataset):
