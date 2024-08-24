@@ -8,7 +8,7 @@ from scipy import stats
 from concurrent.futures import ThreadPoolExecutor
 
 # Paths to the NIfTI files
-root_dir = 'C:/Users/Alejandro/Desktop/ASNR-MICCAI-BraTS2023-GLI-Challenge-TrainingData'
+root_dir = '/workspace/ASNR-MICCAI-BraTS2023-GLI-Challenge-TrainingData'
 seg_volume = "seg"
 volume_types = ["t1c", "t1n", "t2f", "t2w", seg_volume]
 
