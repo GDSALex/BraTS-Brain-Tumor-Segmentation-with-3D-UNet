@@ -17,7 +17,7 @@ def transform():
         tio.ToCanonical(include=include),
         tio.CropOrPad((148, 148, 148), include=include + ['seg']),
         tio.RandomFlip(axes=['LR', 'AP', 'IS'], p=0.2, include=include + ['seg']),
-        tio.HistogramStandardization(landmarks_dict, include=include), #Error in generalization over non-standarized images
+        tio.HistogramStandardization(landmarks_dict, include=include), 
         tio.ZNormalization(include=include),  
         tio.OneOf({
             tio.RandomAffine(include=include + ['seg']): 0.2,
