@@ -14,8 +14,8 @@ import napari
 device = torch.device('cuda') if torch.cuda.is_available() else 'cpu'
 
 # Define root directories
-train_root_dir = 'C:/Users/Alejandro/Desktop/ASNR-MICCAI-BraTS2023-GLI-Challenge-TrainingData'
-val_root_dir = 'C:/Users/Alejandro/Desktop/ASNR-MICCAI-BraTS2023-GLI-Challenge-ValidationData'
+train_root_dir = '/workspace/ASNR-MICCAI-BraTS2023-GLI-Challenge-TrainingData'
+val_root_dir = '/workspace/ASNR-MICCAI-BraTS2023-GLI-Challenge-ValidationData'
 
 # Define modes
 use_training_data = True  # Set to True to use training data
