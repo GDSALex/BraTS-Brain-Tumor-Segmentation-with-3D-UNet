@@ -15,8 +15,8 @@ from scipy.spatial.distance import directed_hausdorff
 device = torch.device('cuda') if torch.cuda.is_available() else 'cpu'
 
 # Define root directories
-train_root_dir = 'C:/Users/Alejandro/Desktop/ASNR-MICCAI-BraTS2023-GLI-Challenge-TrainingData'
-val_root_dir = 'C:/Users/Alejandro/Desktop/ASNR-MICCAI-BraTS2023-GLI-Challenge-ValidationData'
+train_root_dir = '/workspace/ASNR-MICCAI-BraTS2023-GLI-Challenge-TrainingData'
+val_root_dir = '/workspace/ASNR-MICCAI-BraTS2023-GLI-Challenge-ValidationData'
 
 # Define modes
 use_training_data = False  # Set to True to use training data
@@ -233,9 +233,9 @@ slice_number = 85  # Adjust this number to select different slices
 for i in range(len(images)):
     print(f"Image {i} shape: {images[i].shape}")
     print(f"Predicted mask {i} shape: {predicted_masks[i].shape}")
-    num_slices = images[i].shape[2]  # Get the number of slices in the current image
+    num_slices = images[i].shape[2]  
     if slice_number >= num_slices:
-        slice_number = num_slices // 2  # Set to middle slice if out of bounds
+        slice_number = num_slices // 2  
 
 # Plot some random images with their masks
 num_samples = 4
